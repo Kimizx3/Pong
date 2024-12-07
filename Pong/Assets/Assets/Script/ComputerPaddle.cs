@@ -6,7 +6,7 @@ public class ComputerPaddle : Paddle
     public Rigidbody2D ball;
     private void FixedUpdate()
     {
-        if (this.ball.velocity.x > 0.0f)
+        if (this.ball.linearVelocity.x > 0.0f)
         {
             if (this.ball.position.y > this.transform.position.y)
             {
@@ -28,10 +28,5 @@ public class ComputerPaddle : Paddle
                 _rigidbody.AddForce(Vector2.up * this.speed);
             }
         }
-    }
-
-    private void Start()
-    {
-        
     }
 }
